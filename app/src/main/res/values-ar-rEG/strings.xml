@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">الطقس</string>
+    <string name="weather_description">حالق الطقس</string>
+    <string name="current_time">الوقت الحالى</string>
+    <string name="current_date">التاريخ الحالى</string>
+    <string name="humidity">الرطوبة</string>
+    <string name="city">المدينة</string>
+    <string name="temperature">درجة الحرارة</string>
+    <string name="hour">ساعة</string>
+    <string name="settings">الإعدادات</string>
+    <string name="temperature_units">وحدات الحرارة</string>
+    <string name="unit">وحدة</string>
+    <string name="home">الرئيسية</string>
+    <string name="favourites">المفضلة</string>
+    <string name="language">اللغة</string>
+    <string name="wind_speed_unit">وحدة سرعة الرياح</string>
+    <string name="place">المكان</string>
+    <string name="plus">+</string>
+    <string name="pressure">الضغط</string>
+    <string name="clouds">السحاب</string>
+    <string name="wind_speed">سرعة الرياح</string>
+    <string name="use_your_location">استخدام الموقع الجغرافى</string>
+    <string name="location">الموقع</string>
+    <string name="choose_from_map">اختار من الخريطة</string>
+    <string name="open_map">افتح الخريطة</string>
+    <string name="alarm_name">اسم المنبه</string>
+    <string name="alerts">التنبيهات</string>
+    <string name="save">حفظ</string>
+    <string name="ok_button">تمام</string>
+    <string name="press_long_click_to_save">اضغط ضغطة مطولة للحفظ</string>
+</resources>

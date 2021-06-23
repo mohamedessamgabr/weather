@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="current"
+            type="com.example.firstdemo.data.remote.Current" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".FavouriteItemFragment">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/favourite_item_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/weeklyColor"
+                android:minHeight="?attr/actionBarSize"
+                app:navigationIcon="?attr/homeAsUpIndicator">
+
+
+            </androidx.appcompat.widget.Toolbar>
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_margin="8dp"
+                android:padding="16dp"
+                app:cardBackgroundColor="@color/current_weather_color"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp">
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="196dp">
+
+                    <TextView
+                        android:id="@+id/favourite_temperature_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="36dp"
+                        android:text="@string/temperature"
+                        android:textColor="@android:color/white"
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        app:currentTemperature="@{current}"
+                        app:layout_constraintBottom_toBottomOf="@+id/favourite_weather_icon"
+                        app:layout_constraintStart_toEndOf="@+id/favourite_weather_icon"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.309"
+                        tools:text="@string/temperature" />
+
+                    <TextView
+                        android:id="@+id/favourite_weather_description_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="28dp"
+                        android:text="@string/weather_description"
+                        android:textColor="@android:color/white"
+                        android:textStyle="bold"
+                        app:currentWeatherDescription="@{current}"
+                        app:layout_constraintStart_toStartOf="@+id/favourite_temperature_text"
+                        app:layout_constraintTop_toBottomOf="@+id/favourite_temperature_text"
+                        tools:text="@string/weather_description" />
+
+                    <TextView
+                        android:id="@+id/favourite_current_date_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/current_date"
+                        android:textColor="@android:color/white"
+                        app:currentDateTime="@{current}"
+                        app:layout_constraintEnd_toEndOf="@+id/favourite_weather_description_text"
+                        app:layout_constraintStart_toStartOf="@+id/favourite_weather_description_text"
+                        app:layout_constraintTop_toBottomOf="@+id/favourite_weather_description_text"
+                        tools:text="@string/current_date" />
+
+                    <ImageView
+                        android:id="@+id/favourite_weather_icon"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_marginStart="36dp"
+                        android:layout_marginTop="32dp"
+                        app:currentIcon="@{current}"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_launcher_background" />
+
+                    <TextView
+                        android:id="@+id/favourite_humidity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="32dp"
+                        android:text="@string/humidity"
+
+                        android:textColor="@android:color/white"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/favourite_weather_icon" />
+
+                    <TextView
+                        android:id="@+id/favourite_city_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:text="@string/city"
+                        android:textColor="@android:color/white"
+                        app:layout_constraintBottom_toTopOf="@+id/favourite_temperature_text"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="@string/city" />
+
+
+                    <TextView
+                        android:id="@+id/favourite_humidityText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:text="TextView"
+                        android:textColor="@android:color/white"
+                        app:currentHumidity="@{current}"
+                        app:layout_constraintStart_toEndOf="@+id/favourite_humidity"
+                        app:layout_constraintTop_toTopOf="@+id/favourite_humidity" />
+
+                    <TextView
+                        android:id="@+id/favourite_pressure"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="48dp"
+                        android:text="@string/pressure"
+                        android:textColor="@android:color/white"
+                        app:layout_constraintStart_toEndOf="@+id/favourite_humidityText"
+                        app:layout_constraintTop_toTopOf="@+id/favourite_humidityText" />
+
+                    <TextView
+                        android:id="@+id/favourite_clouds"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:text="@string/clouds"
+                        android:textColor="@android:color/white"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/favourite_pressure"
+                        app:layout_constraintTop_toBottomOf="@+id/favourite_pressure"
+                        app:layout_constraintVertical_bias="1.0" />
+
+                    <TextView
+                        android:id="@+id/favourite_wind_speed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="8dp"
+                        android:text="@string/wind_speed"
+                        android:textColor="@android:color/white"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/favourite_humidity"
+                        app:layout_constraintTop_toBottomOf="@+id/favourite_humidity"
+                        app:layout_constraintVertical_bias="1.0" />
+
+                    <TextView
+                        android:id="@+id/favourite_wind_speed_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="TextView"
+                        android:textColor="@android:color/white"
+                        app:currentWindSpeed="@{current}"
+                        app:layout_constraintBottom_toBottomOf="@+id/favourite_wind_speed"
+                        app:layout_constraintStart_toEndOf="@+id/favourite_wind_speed" />
+
+                    <TextView
+                        android:id="@+id/favourite_clouds_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TextView"
+                        android:textColor="@android:color/white"
+                        app:currentCloud="@{current}"
+
+                        app:layout_constraintBottom_toBottomOf="@+id/favourite_clouds"
+                        app:layout_constraintEnd_toEndOf="@+id/favourite_pressure_text"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toEndOf="@+id/favourite_clouds"
+                        app:layout_constraintTop_toBottomOf="@+id/favourite_pressure"
+                        app:layout_constraintVertical_bias="1.0" />
+
+                    <TextView
+                        android:id="@+id/favourite_pressure_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="TextView"
+                        android:textColor="@android:color/white"
+                        app:currentPressure="@{current}"
+                        app:layout_constraintBottom_toBottomOf="@+id/favourite_pressure"
+                        app:layout_constraintStart_toEndOf="@+id/favourite_pressure" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/favourite_hourly_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="16dp">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/favourite_daily_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+
+        </LinearLayout>
+    </ScrollView>
+</layout>
