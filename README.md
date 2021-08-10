@@ -1,4 +1,4 @@
-# **Weather Application**
+# **Weather Android Application**
 
 ## The application has three screens:
   - The first screen displays the current weather details and the next seven days as well.
